@@ -31,6 +31,7 @@
     padding: 6px 10px;
     border-radius: 4px;
     cursor: pointer;
+    margin-left: 10px;
   }
   
   .character-table td button:hover {
@@ -52,3 +53,6 @@
     cursor: not-allowed;
   }
   
+.heading-name{
+  text-align: center;
+}

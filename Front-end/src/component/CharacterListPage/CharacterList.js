@@ -62,7 +62,7 @@ const CharacterList = () => {
 
   return (
     <div className="character-list-container">
-      <h1>Star Wars Characters</h1>
+      <h1 className='heading-name'>Star Wars Characters</h1>
       <table className="character-table">
         <thead>
           <tr>
@@ -81,7 +81,7 @@ const CharacterList = () => {
               <td>{character.height}</td>
               <td>{character.mass}</td>
               <td>
-                <button onClick={() => toggleFavorite(character)}>
+                <button className="btn-single" onClick={() => toggleFavorite(character)}>
                   {favorites.some((fav) => fav.name === character.name) ? 'Remove from Favorites' : 'Add to Favorites'}
                 </button>
                 <Link to={`/character/${calculateSlNo(index)}`}><button>Details</button></Link>
