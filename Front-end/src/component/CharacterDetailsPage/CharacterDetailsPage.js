@@ -2,7 +2,13 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
+import {
+  Box,
+  Heading,
+  List,
+  ListItem,
+} from '@chakra-ui/react';
 
 const CharacterDetails = () => {
   const { id } = useParams(); // Use useParams hook to get the route parameters
@@ -25,25 +31,28 @@ const CharacterDetails = () => {
   };
 
   if (!character) {
-    return <div>Loading...</div>;
+    return <Box>Loading...</Box>;
   }
 
   return (
-    <div>
-      <h1>{character.name}</h1>
-      <p>Height: {character.height} cm</p>
-      <p>Mass: {character.mass} kg</p>
-      <p>Hair Color: {character.hair_color}</p>
-      <p>Skin Color: {character.skin_color}</p>
-      <p>Eye Color: {character.eye_color}</p>
-      <p>Birth Year: {character.birth_year}</p>
-      <h2>Movies</h2>
-      <ul>
+    <Box p={4}>
+      <Heading as="h1" mb={4}>{character.name}</Heading>
+      <List mb={4}>
+        <ListItem>Height: {character.height} cm</ListItem>
+        <ListItem>Mass: {character.mass} kg</ListItem>
+        <ListItem>Hair Color: {character.hair_color}</ListItem>
+        <ListItem>Skin Color: {character.skin_color}</ListItem>
+        <ListItem>Eye Color: {character.eye_color}</ListItem>
+        <ListItem>Birth Year: {character.birth_year}</ListItem>
+      </List>
+      <Heading as="h2" mb={2}>Movies</Heading>
+      <List>
         {movies.map((movie, index) => (
-          <li key={index}>{movie}</li>
+          <ListItem key={index}>{movie}</ListItem>
         ))}
-      </ul>
-    </div>
+      </List>
+      <Link to="/">Back to Characters</Link>
+    </Box>
   );
 };
 
