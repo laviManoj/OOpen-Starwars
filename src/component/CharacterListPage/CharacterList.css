@@ -1,59 +1,61 @@
 /* CharacterList.css */
 
 .character-list-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .character-contentname{
-    text-align: center;
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  }
-  
-  .character-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-  }
-  
-  .character-table th, .character-table td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .character-table th {
-    background-color: #f2f2f2;
-  }
-  
-  .character-table td button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-left: 10px;
-  }
-  
-  .character-table td button:hover {
-    background-color: #0056b3;
-  }
-  
-  .pagination {
-    margin-top: 20px;
-    margin-left: 67%;
-  }
-  
-  .pagination button {
-    margin-right: 10px;
-    cursor: pointer;
-  }
-  
-  .pagination button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-  
-.heading-name{
+.heading-name {
   text-align: center;
   color: rgb(250, 112, 112);
+}
+
+.character-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.character-table th,
+.character-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.character-table th {
+  background-color: #f2f2f2;
+}
+
+.character-table td button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.character-table td button:hover {
+  background-color: #0056b3;
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pagination button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }

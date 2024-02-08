@@ -1,7 +1,10 @@
+// CharacterList.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './CharacterList.css'; // Import CSS file for styling
+import backgroundImg from '../../assests/image2.png'; // Import background image
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
@@ -61,7 +64,7 @@ const CharacterList = () => {
   };
 
   return (
-    <div className="character-list-container">
+    <div className="character-list-container" style={{ backgroundImage: `url(${backgroundImg})` }}>
       <h1 className='heading-name'>Star Wars Characters</h1>
       <table className="character-table">
         <thead>
