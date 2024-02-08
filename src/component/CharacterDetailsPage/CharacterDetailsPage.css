@@ -1,0 +1,51 @@
+/* CharacterDetails.css */
+
+.character-details-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  /* background-color: rgb(186, 241, 186); */
+
+  }
+  
+  .character-name {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .character-details-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .character-detail {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .movies-heading {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .movies-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .movie {
+    border: 14px solid #d25f28;
+    border-radius: 27px;
+    padding: 8px;
+    margin-bottom: 18px;
+  }
+  
+  .back-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #007bff;
+  }
+  

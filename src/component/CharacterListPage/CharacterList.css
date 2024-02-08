@@ -6,11 +6,13 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: rgb(186, 241, 186);
 }
 
 .heading-name {
   text-align: center;
   color: rgb(250, 112, 112);
+  display: flex;
 }
 
 .character-table {

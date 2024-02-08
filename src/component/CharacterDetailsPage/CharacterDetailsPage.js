@@ -3,12 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
-import {
-  Box,
-  Heading,
-  List,
-  ListItem,
-} from '@chakra-ui/react';
+import './CharacterDetailsPage.css'; // Import CSS file for styling
 
 const CharacterDetails = () => {
   const { id } = useParams(); // Use useParams hook to get the route parameters
@@ -31,28 +26,28 @@ const CharacterDetails = () => {
   };
 
   if (!character) {
-    return <Box>Loading...</Box>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
-    <Box p={4}>
-      <Heading as="h1" mb={4}>{character.name}</Heading>
-      <List mb={4}>
-        <ListItem>Height: {character.height} cm</ListItem>
-        <ListItem>Mass: {character.mass} kg</ListItem>
-        <ListItem>Hair Color: {character.hair_color}</ListItem>
-        <ListItem>Skin Color: {character.skin_color}</ListItem>
-        <ListItem>Eye Color: {character.eye_color}</ListItem>
-        <ListItem>Birth Year: {character.birth_year}</ListItem>
-      </List>
-      <Heading as="h2" mb={2}>Movies</Heading>
-      <List>
+    <div className="character-details-container">
+      <h1 className="character-name">{character.name}</h1>
+      <ul className="character-details-list">
+        <li className="character-detail">Height: {character.height} cm</li>
+        <li className="character-detail">Mass: {character.mass} kg</li>
+        <li className="character-detail">Hair Color: {character.hair_color}</li>
+        <li className="character-detail">Skin Color: {character.skin_color}</li>
+        <li className="character-detail">Eye Color: {character.eye_color}</li>
+        <li className="character-detail">Birth Year: {character.birth_year}</li>
+      </ul>
+      <h2 className="movies-heading">Movies</h2>
+      <ul className="movies-list">
         {movies.map((movie, index) => (
-          <ListItem key={index}>{movie}</ListItem>
+          <li key={index} className="movie">{movie}</li>
         ))}
-      </List>
-      <Link to="/">Back to Characters</Link>
-    </Box>
+      </ul>
+      <Link to="/" className="back-link">Back to Characters</Link>
+    </div>
   );
 };
 
